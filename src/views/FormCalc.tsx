@@ -38,10 +38,10 @@ const FormCalc = () => {
     <Col>
       <Form onFinish={handleSubmit} role='formCalc'>
         <FormItem>
-            <InputNumber value={num1.a} role='num1' onChange={(e) => e && handleChange1(e.toString())}/>
+            <InputNumber value={num1.a} id='num1' onChange={(e) => e && handleChange1(e.toString())}/>
         </FormItem>
         <FormItem>
-            <InputNumber value={num2.a} role='num2' onChange={(e) => e && handleChange2(e.toString())}/>
+            <InputNumber value={num2.a} id='num2' onChange={(e) => e && handleChange2(e.toString())}/>
         </FormItem>
         <FormItem>
             <Button role='submitB' type='primary' htmlType='submit'>
@@ -49,7 +49,7 @@ const FormCalc = () => {
             </Button>
         </FormItem>
       </Form>
-      <Badge count={res.a}>
+      <Badge count={res.a} className='badge'>
           <Button>Ingenieria informática</Button>
       </Badge>
       </Col>
