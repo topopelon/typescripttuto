@@ -1,10 +1,8 @@
-import './App.css';
-import FormCalc from './views/FormCalc';
+import "./App.css";
+import { SumCalc } from "./features/sum-feature/presentation/SumCalc";
 
 function App() {
-  return (
-    <FormCalc />
-  );
+  return <SumCalc />;
 }
 
 export default App;
