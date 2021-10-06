@@ -1,7 +1,4 @@
-type professor = "professor";
-type coordinator = "coordinator";
-
-type Privileges = professor | coordinator;
+type Privileges = "professor" | "coordinator";
 
 type User = {
   name: string;

@@ -9,6 +9,6 @@ export const userControlRoutes = {
     return [routes.index, routes.calculator, routes.error];
   },
   coordinatorRoutes: (): RouteType[] => {
-    return [routes.index, routes.calculator, routes.error];
+    return [routes.index, routes.error];
   },
 };

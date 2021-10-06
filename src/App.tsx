@@ -1,26 +1,8 @@
-import { BrowserRouter, Switch, Route } from "react-router-dom";
 import "./App.css";
-import { routerManager } from "./core/router/user-control/router-manager";
+import { RoutesApp } from "./core/router/Routes-App";
 
 function App() {
-  return (
-    <BrowserRouter>
-      <Switch>
-        {routerManager().map((route, index) => {
-          return (
-            <Route
-              exact={route.exact}
-              path={route.path}
-              key={index}
-              component={(props: any) => {
-                return <route.component {...props} />;
-              }}
-            />
-          );
-        })}
-      </Switch>
-    </BrowserRouter>
-  );
+  return <RoutesApp />;
 }
 
 export default App;

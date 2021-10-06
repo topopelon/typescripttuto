@@ -1,7 +1,8 @@
 import { http } from "../../../../../core/backend/http";
+import { config } from "../../../../../core/config/constants";
 import { TitleDTO } from "../../dto/TitleDTO";
 
-const titleListRoute = "/todos";
+const titleListRoute = config.baseURL1 + "/todos";
 
 export const titleData = {
   getTitlesList: async (): Promise<TitleDTO[]> => {
