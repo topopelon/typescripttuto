@@ -11,7 +11,8 @@ export const titleRepository = {
     }
     // Parse to domain models, where bussines logic can understand the data
     try {
-      const value = res.value.map((titleDto: TitleDTO): Title => {
+      const value = res.value.map((titleDto): Title => {
+        console.log(titleDto);
         nullCheck(titleDto);
         return {
           id: titleDto.id,
@@ -31,7 +32,7 @@ export const titleRepository = {
   },
 };
 
-// Manually check undefined xd
+// Manually check undefined and null xd
 const nullCheck = (titleDTO: TitleDTO) => {
-  if (!titleDTO.id || !titleDTO.title) throw Error();
+  if (titleDTO.id == null || titleDTO.title == null) throw Error();
 };
